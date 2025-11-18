@@ -12,6 +12,17 @@ const Todo = () => {
             setInput('');
         }
     };
+
+    const handleDeleteTask = (index) => {
+        const newTasks = [...tasks];
+        newTasks.length = 0;
+        for (let i = 0; i < tasks.length; i++) {
+            if (i !== index) {
+                newTasks.push(tasks[i]);
+            }
+            setTasks(newTasks);
+        }
+    };
     const handleEnterKey = (e) => {
         if (e.key === 'Enter') {
             handleAddTask();
@@ -30,17 +41,19 @@ const Todo = () => {
                     />
                     <button className='add-task-button'
                         onClick={handleAddTask}
-                        
+
                     >Add Task</button>
                 </div>
                 <div className="task-section">
                     <ul className='task-list'>
                         {tasks.map((task, index) => (
                             <li id={`task-${index}`} key={index} className='task-item'>{task}
-                            <div className='task-item-actions'>
-                                <button className='edit-task-button'>✏️</button>
-                                <button className='delete-task-button'>🗑️</button>
-                            </div>
+                                <div className='task-item-actions'>
+                                    <button className='edit-task-button'>✏️</button>
+                                    <button className='delete-task-button'
+                                        onClick={() => handleDeleteTask(index)}
+                                    >🗑️</button>
+                                </div>
                             </li>
                         ))}
                     </ul>

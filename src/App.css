@@ -42,7 +42,6 @@ h1 {
   width: 100%;
 } 
 .task-item {
-  text-transform: capitalize;
   display: flex;
   align-items: center;
   padding: 10px;
