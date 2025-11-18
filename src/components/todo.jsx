@@ -6,6 +6,17 @@ const Todo = () => {
   const [tasks, setTasks] = useState([]);
   const [input, setInput] = useState('');
 
+const handleAddTask = () => {
+        if (input) {
+            setTasks([input, ...tasks]);
+            setInput('');
+        }
+    };
+    const handleEnterKey = (e) => {
+        if (e.key === 'Enter') {
+            handleAddTask();
+        }
+    }
   return (
     <>
       <h1>Todo List</h1>
