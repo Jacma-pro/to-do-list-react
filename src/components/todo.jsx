@@ -36,7 +36,12 @@ const Todo = () => {
                 <div className="task-section">
                     <ul className='task-list'>
                         {tasks.map((task, index) => (
-                            <li id={`task-${index}`} key={index} className='task-item'>{task}</li>
+                            <li id={`task-${index}`} key={index} className='task-item'>{task}
+                            <div className='task-item-actions'>
+                                <button className='edit-task-button'>✏️</button>
+                                <button className='delete-task-button'>🗑️</button>
+                            </div>
+                            </li>
                         ))}
                     </ul>
                 </div>
