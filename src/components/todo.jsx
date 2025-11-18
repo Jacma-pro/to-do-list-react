@@ -7,9 +7,18 @@ const Todo = () => {
   const [input, setInput] = useState('');
 
   return (
-    <div className="todo-container">
-        <h1>Todo List</h1>
-    </div>
+    <>
+      <h1>Todo List</h1>
+      <div className="todo-container">
+        <div className="input-section">
+          <input className='task-input'
+            type="text"
+          ></input>
+          <button className='add-task-button'>Add Task</button>
+        </div>
+
+      </div>
+    </>
   );
 }
 export default Todo;
