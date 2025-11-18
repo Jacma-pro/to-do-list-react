@@ -4,15 +4,15 @@
   padding: 2rem;
   text-align: center;
 
-  --green: #446b57;
+  --dark-green: #375344;
 }
 h1 {
   margin-bottom: 20px;
-  color: var(--green);
+  color: var(--dark-green);
 }
 
 .todo-container {
-  background-color: var(--green);
+  background-color: var(--dark-green);
   border-radius: 5px;
 }
 
