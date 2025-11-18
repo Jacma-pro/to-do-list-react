@@ -36,7 +36,7 @@ const Todo = () => {
                 <div className="task-section">
                     <ul className='task-list'>
                         {tasks.map((task, index) => (
-                            <li key={index} className='task-item'>{task}</li>
+                            <li id={`task-${index}`} key={index} className='task-item'>{task}</li>
                         ))}
                     </ul>
                 </div>
