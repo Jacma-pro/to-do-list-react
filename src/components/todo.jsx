@@ -13,10 +13,15 @@ const Todo = () => {
         <div className="input-section">
           <input className='task-input'
             type="text"
-          ></input>
+          >
+          </input>
           <button className='add-task-button'>Add Task</button>
         </div>
-
+        <div className="task-section">
+            <ul className='task-list'>
+                
+            </ul>
+        </div>
       </div>
     </>
   );
